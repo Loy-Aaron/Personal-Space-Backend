@@ -7,7 +7,7 @@ const generateToken = (uid, res) =>{
     res.cookie('token', token, {
         httpOnly: true, // Prevents client-side JavaScript access
         secure: NODE_ENV === 'production',
-        sameSite: "Strict", // Helps prevent CSRF attacks
+        sameSite: "None", // Helps prevent CSRF attacks
         maxAge: 7 * 24 * 60 * 60 * 1000
     });
 };
